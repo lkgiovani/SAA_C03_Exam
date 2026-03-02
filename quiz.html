@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS SAA-C03 Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+
+<header>
+  <h1>AWS SAA-C03 Quiz</h1>
+  <p>Solutions Architect Associate — Practice Questions</p>
+</header>
+
+<div class="filter-bar" id="filter-bar">
+  <select id="select-mode">
+    <option value="all">All questions</option>
+    <option value="random">Random order</option>
+  </select>
+  <input type="number" id="input-limit" placeholder="Limit" min="1" max="710" title="Number of questions" />
+  <button id="btn-start-filter">Start</button>
+</div>
+
+<div class="progress-bar-wrap">
+  <div class="progress-bar" id="progress-bar" style="width:0%"></div>
+</div>
+<div class="progress-label">
+  <span id="progress-text">Question 0 of 0</span>
+  <span id="score-text">Score: 0</span>
+</div>
+
+<div class="card" id="quiz-card">
+  <div class="question-number" id="question-number">Question 1</div>
+  <div class="question-text" id="question-text">Loading...</div>
+  <div class="multi-hint" id="multi-hint" style="display:none">Choose all that apply</div>
+  <div class="options" id="options"></div>
+  <div class="feedback" id="feedback"></div>
+  <div class="actions">
+    <button id="btn-confirm" disabled>Confirm</button>
+    <button id="btn-next">Next →</button>
+    <button id="btn-skip">Skip</button>
+  </div>
+</div>
+
+<div class="scoreboard" id="scoreboard">
+  <h2>Quiz Complete!</h2>
+  <div class="score-number" id="final-percent">0%</div>
+  <div class="score-details" id="final-details"></div>
+  <div class="score-stats">
+    <div class="stat green">
+      <div class="stat-value" id="stat-correct">0</div>
+      <div class="stat-label">Correct</div>
+    </div>
+    <div class="stat red">
+      <div class="stat-value" id="stat-wrong">0</div>
+      <div class="stat-label">Wrong</div>
+    </div>
+    <div class="stat blue">
+      <div class="stat-value" id="stat-skipped">0</div>
+      <div class="stat-label">Skipped</div>
+    </div>
+  </div>
+  <button id="btn-restart">Restart Quiz</button>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
